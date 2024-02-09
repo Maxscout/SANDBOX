@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsguup0m8xqxp"]
+
+[ext_resource type="Script" path="res://player/Camera.gd" id="1"]
+[ext_resource type="Script" path="res://player/Player.gd" id="2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rhw8e"]
+radius = 0.24531
+height = 1.6843
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("2")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 9.09495e-15, 0, -9.09495e-15, 1, 0, 0, 0, 1, 0, 1.5, 0)
+cull_mask = 524287
+current = true
+fov = 90.0
+far = 200.0
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84981, 0)
+shape = SubResource("CapsuleShape3D_rhw8e")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49453, 0)
+light_energy = 4.0
+omni_range = 2.44823

@@ -1,0 +1,390 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckjpll8xjag6u"]
+
+[ext_resource type="Texture2D" uid="uid://c1ckxqsapqjmw" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="1_22nyu"]
+[ext_resource type="ArrayMesh" uid="uid://c23xawlnrss6m" path="res://OBJECTS/flatplane.obj" id="1_o4hby"]
+[ext_resource type="PackedScene" uid="uid://bsguup0m8xqxp" path="res://Player.tscn" id="3_wqaum"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hvdmp"]
+albedo_texture = ExtResource("1_22nyu")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jxx8j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ef1m6"]
+size = Vector3(100.005, 0.299409, 100)
+
+[sub_resource type="Sky" id="Sky_aeemd"]
+
+[sub_resource type="Environment" id="Environment_cljdi"]
+background_mode = 1
+sky = SubResource("Sky_aeemd")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Flatplane" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane/RigidBody3D"]
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.00239105, -0.999997, 0, 0.999997, 0.00239105, 0, 19.9985, -19.9808)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane2"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane2/RigidBody3D"]
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.118381, -14.8026, 2.83653e-09, -2.85874e-23, -1.34609e-06, -0.135, 0.0648922, 27.004, -5.17459e-09, -8.31703, 2.60661, 5.55527)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane5"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane5/RigidBody3D"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.125806, 11.1703, -2.14049e-09, -2.85874e-23, -1.34609e-06, -0.135, -0.0489687, 28.6977, -5.49914e-09, -0.347817, 2.60661, 10.8673)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane7"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane7/RigidBody3D"]
+transform = Transform3D(0.4, -9.53674e-05, 0, 5.82077e-11, 0.399999, 0, 9.99201e-14, 4.3201e-12, 0.4, -3.8147e-06, -7.92444e-05, 0)
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.132777, 5.56596, -1.06657e-09, -2.85874e-23, -1.34609e-06, -0.135, -0.0244002, 30.2878, -5.80385e-09, 14.4245, 2.60661, 5.55527)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane6"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane6/RigidBody3D"]
+transform = Transform3D(0.4, 1.90735e-06, 4.44089e-16, 0, 0.4, 0, -4.44089e-16, 4.54747e-13, 0.4, 0, 0, 0)
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 19.9207, 19.9985, 0.0468235)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane3"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane3/RigidBody3D"]
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="Flatplane4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -19.8974, 19.9985, 0.0468235)
+material_override = SubResource("StandardMaterial3D_hvdmp")
+mesh = ExtResource("1_o4hby")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Flatplane4"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_jxx8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flatplane4/RigidBody3D"]
+shape = SubResource("BoxShape3D_ef1m6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cljdi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 1.38512, -17.7013)
+light_energy = 16.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 1.38512, -17.7013)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 1.38512, -17.7013)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 1.38512, -17.7013)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 1.38512, -17.7013)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 1.38512, -17.7013)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 1.38512, -17.7013)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 1.38512, -13.6316)
+light_energy = 16.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 1.38512, -13.6316)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 1.38512, -13.6316)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 1.38512, -13.6316)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 1.38512, -13.6316)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 1.38512, -13.6316)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 1.38512, -13.6316)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 1.38512, -9.08222)
+light_energy = 16.0
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 1.38512, -9.08222)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 1.38512, -9.08222)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 1.38512, -9.08222)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 1.38512, -9.08222)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 1.38512, -9.08222)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 1.38512, -9.08222)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D22" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 1.38512, -5.80916)
+light_energy = 16.0
+
+[node name="OmniLight3D23" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 1.38512, -5.80916)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D24" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 1.38512, -5.80916)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D25" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 1.38512, -5.80916)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D26" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 1.38512, -5.80916)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 1.38512, -5.80916)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D28" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 1.38512, -5.80916)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D29" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 1.38512, -2.31146)
+light_energy = 16.0
+
+[node name="OmniLight3D30" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 1.38512, -2.31146)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D31" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 1.38512, 8.68836)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D32" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91786, 4.08187, 4.42879)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 1.38512, -2.31146)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 1.38512, -2.31146)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D35" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 1.38512, 7.8794)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D36" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 5.7059, -17.8785)
+light_energy = 16.0
+
+[node name="OmniLight3D37" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 5.7059, -17.8785)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D38" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 5.7059, -17.8785)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D39" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 5.7059, -17.8785)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D40" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 5.7059, -17.8785)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D41" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 5.7059, -17.8785)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D42" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 5.7059, -17.8785)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D43" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.342, 9.1716, -17.8785)
+light_energy = 16.0
+
+[node name="OmniLight3D44" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8564, 9.1716, -17.8785)
+light_color = Color(0, 1, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D45" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60585, 9.1716, -17.8785)
+light_color = Color(1, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D46" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08659, 9.1716, -17.8785)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D47" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81295, 9.1716, -17.8785)
+light_color = Color(0, 0, 1, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D48" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0708, 9.1716, -17.8785)
+light_color = Color(0, 1, 0, 1)
+light_energy = 16.0
+
+[node name="OmniLight3D49" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8131, 9.1716, -17.8785)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+
+[node name="Player" parent="." instance=ExtResource("3_wqaum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.701269, 0)
